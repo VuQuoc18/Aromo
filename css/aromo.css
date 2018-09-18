@@ -28,7 +28,9 @@ hr{
 
 
 /*=======Navbar=======*/
-
+.navbar-collapse{
+	justify-content: space-between !important;
+}
 
 .dropdown-toggle::after{
 	background-image: url("../images/SVG/arrow-down.svg");
@@ -228,8 +230,7 @@ hr{
 
 #client img{
 	max-height: 100px;
-	max-width: 255px;
-	margin-left: 25%;
+
 }
 
 .customrer-logos{
@@ -265,7 +266,7 @@ hr{
 }
 
 .services .img-fluid{
-	width: 80%;
+	width: 90%;
 }
 
 .services p {
@@ -446,11 +447,6 @@ button.owl-dot.active span{
 	color: white;
 }
 
-.footer .row:first-child{
-	padding-top: 70px;
-	padding-bottom: 50px;
-}
-
 .footer .footer-menu a{
 	color: white;
 }
@@ -462,6 +458,8 @@ button.owl-dot.active span{
 .footer hr{
 	opacity: 0.1; 
 }
+
+
 
 
 /*=======footer=======*/
@@ -480,7 +478,7 @@ button.owl-dot.active span{
 
     /*=======Navbar=======*/
     .menu .nav-item{
-	padding: 0 40px;
+	padding: 0 15px;
 	}
 
 	.menu-bar{
@@ -523,12 +521,10 @@ button.owl-dot.active span{
 		padding-top: 0;
 	}
 
-	#demo{
-		padding-top: 40px;
-	}
+	
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	body{
 		overflow-x: hidden;
 	}
@@ -542,21 +538,14 @@ button.owl-dot.active span{
 		padding: 9px 0;
 	}
 
-	.lang {
-		display: none;
-	}
+	
 
 	.dropdown-toggle::after{
 		margin-left: 8px;
 	}
 
-	.footer-menu{
-		float: none;
-		display: block;
-		margin-right: 25px;
-	}
+	
 }
-
 
 	/*=======Services=======*/
 
@@ -574,11 +563,9 @@ button.owl-dot.active span{
 
 }
 
-
-
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 599px) {
     .hide-logo{
-		visibility: visible;
+		visibility: visible !important;
 		left: 50%;
 		margin-left: -63px;
 		top: 14px;
