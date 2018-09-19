@@ -235,9 +235,6 @@ hr{
 
 }
 
-.customrer-logos{
-
-}
 
 /*=======Services=======*/
 
@@ -390,12 +387,10 @@ hr{
 
 
 .owl-dots{
-	width: 100%;
-	display: inherit;
+
 	margin: 0 auto;
 	margin-top: 60px;
     margin-bottom: 100px;
-    margin-left: 48%;
 }
 
 button.owl-dot.active span{
@@ -461,6 +456,22 @@ button.owl-dot.active span{
 .footer hr{
 	opacity: 0.1; 
 }
+
+#contact .nav-link {
+		padding-right: 20px;
+	}
+
+#contact img {
+	min-height: 20px;
+}
+
+
+
+#contact .wtm .nav-link:last-child:before{
+		content: "|";
+		margin-right: 25px;
+}
+
 
 
 
@@ -593,6 +604,7 @@ button.owl-dot.active span{
 		left: 50%;
 		margin-left: -63px;
 		top: 14px;
+		background-color: #fff;
 	}
 	.navbar-brand{
 		display: none;
@@ -601,6 +613,11 @@ button.owl-dot.active span{
 	.navbar-light .navbar-toggler {
 		border: none;
 	}
+
+	/*.menu{
+		width: 40%;
+		height: 100%;
+	}*/
 
 	/*=======Top=======*/
 	#about-us .content-top h3, #about-us .content-top h2, #about-us .content-top p{
@@ -635,5 +652,21 @@ button.owl-dot.active span{
 	#news {
 		text-align: center;
 	}
+
+	/*=======Contact=======*/
+
+	#contact .nav-link {
+		padding-right: 0px;
+	}
+
+	#contact .wtm .nav-link:last-child:before{
+		content: "|";
+		margin-right: 10px;
+	}
+
+	#contact img{
+		margin-top: 10px;
+	}
+
 
 }
