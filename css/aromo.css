@@ -197,7 +197,8 @@ hr{
 }
 
 .content-top .btn-explore{
-	padding: 12px 19px;
+	width: 176px;
+	height: 40px;
 	margin-top: 40px;
 	background-color: #01c8a3;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
@@ -211,7 +212,8 @@ hr{
 }
 
 .content-top .btn-explore:hover, .content-top .btn-explore:active{
-	padding: 12px 19px;
+	width: 176px;
+	height: 40px;
 	margin-top: 40px;
 	background-color: #21debb;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.08);
@@ -290,7 +292,8 @@ hr{
 }
 
 .services .btn-readmore{
-	padding: 5px 12px;
+	width: 134px;
+	height: 30px;
 	border-radius: 2px;
 	position: absolute;
 	background-color: #01c8a3;
@@ -570,9 +573,7 @@ button.owl-dot.active span{
 		margin-left: -63px;
 		top: 14px;
 	}
-	.navbar-brand{
-		visibility: hidden;
-	}
+	
 
 	.w-sm-50{
 		width: 50% !important;
@@ -580,6 +581,59 @@ button.owl-dot.active span{
 
 	.services .btn-readmore, .services .btn-readmore:hover{
 		position: static;
+	}
+
+}
+
+@media (max-width: 766px){
+
+	/*=======navbar=======*/
+	.hide-logo{
+		visibility: visible !important;
+		left: 50%;
+		margin-left: -63px;
+		top: 14px;
+	}
+	.navbar-brand{
+		display: none;
+	}
+
+	.navbar-light .navbar-toggler {
+		border: none;
+	}
+
+	/*=======Top=======*/
+	#about-us .content-top h3, #about-us .content-top h2, #about-us .content-top p{
+		text-align: center;
+	}
+
+	.content-top .btn-explore {
+		margin-right: calc(50% - 88px);
+		margin-right: -moz-calc(50% - 15px);
+		margin-right: -webkit-calc(50% - 15px);
+    
+	}
+
+	/*=======Services=======*/
+	.services .img-fluid {
+		width: 55%;
+		margin: 0 auto;
+	}
+
+	.services {
+		text-align: center;
+	}
+
+	.services .btn-readmore{
+		margin-left: calc(50% - 68px);
+		margin-left: -moz-calc(50% - 68px);
+		margin-left: -webkit-calc(50% - 68px);
+	}
+
+	/*=======News=======*/
+
+	#news {
+		text-align: center;
 	}
 
 }

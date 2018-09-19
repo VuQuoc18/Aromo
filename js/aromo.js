@@ -67,7 +67,7 @@ $('ul.nav li.dropdown').hover(function() {
             nav:true
         },
         600:{
-            items:2,
+            items:1,
             nav:false
         },
         1000:{
