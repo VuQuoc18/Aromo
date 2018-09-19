@@ -85,6 +85,9 @@ $('ul.nav li.dropdown').hover(function() {
 
 console.log("a");
 
+$('.desktop').menuBreaker();
+$(window).on('load resize', function () {
+  $('.mobile').height($(window).height() - $('nav').height());
+});
 
-
-  console.log("b");
+console.log("b");
