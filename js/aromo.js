@@ -24,11 +24,11 @@ $(document).ready(function(){
 });
 
 // -------------- Hover button --------------
-$('ul.nav li.dropdown').hover(function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-}, function() {
-  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-});
+// $('ul.nav li.dropdown').hover(function() {
+//   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+// }, function() {
+//   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+// });
 
 
 // -------------- Carousel --------------
@@ -83,29 +83,20 @@ $('ul.nav li.dropdown').hover(function() {
     }
 })
 
-// function openNav() {
-//     document.getElementById("mySidenav").style.width = "40%";
-// }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+$(document).ready(function(){
+  $('#nav-icon').click(function(){
+    $(this).toggleClass('open');
+  });
+});
 
 
-function navtoggler() {
-    var x = document.getElementById("mySidenav");
-    if (x.style.width === "0px") {
-        x.style.width = "40%";
-    } else {
-        x.style.width = "0px";
-    }
-}
-// console.log(a)
-
-// function myFunction() {
-// ("#mySidenav").click(function){
-//   $(this).toggleClass("enlarge")
-//   }
-//   }
-
-//   console.log(b)
+    $('ul.nav > li > a').click(function() {
+        
+        $('ul.sub-menu').slideUp('normal');
+   
+        if($(this).next('ul.sub-menu').is(':hidden') == true) {    
+            $(this).next('ul.sub-menu').slideDown('normal');
+            } 
+            
+    });
