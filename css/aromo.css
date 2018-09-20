@@ -27,7 +27,9 @@ hr{
 }
 
 
-
+.hambuger-icon {
+	display: none;
+}
 
 /*=======Navbar=======*/
 .navbar-collapse{
@@ -660,28 +662,31 @@ button.owl-dot.active span{
 		margin-top: 10px;
 	}
 	
-	i.fas.fa-bars.hambuger-icon{
+	.hambuger-icon{
 		display: block;
 		font-size: 25px;
-		font-weight: 500;
 	}
 
 	
-
+	
 	.navbar-toggler {display: none}
 		
-	/*	.sidenav {
+		.sidenav {
 	    height: 100%;
 	    width: 0;
 	    position: fixed;
 	    z-index: 0;
-	    top: 0;
+	    top: 60px;
 	    left: 0;
 	    background-color: #0c2a34;
 	    overflow-x: hidden;
 	    transition: 0.4s;
 	    padding-top: 60px;
-	    display: all;
+	
+	}
+
+	.enlager{
+		width: 300px;
 	}
 
 	 #mySidenav {
@@ -707,7 +712,7 @@ button.owl-dot.active span{
 	    right: 25px;
 	    font-size: 36px;
 	    margin-left: 50px;
-	}*/
+	}
 	
 
 /*	#openMenu {

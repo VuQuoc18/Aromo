@@ -83,11 +83,29 @@ $('ul.nav li.dropdown').hover(function() {
     }
 })
 
-console.log("a");
+// function openNav() {
+//     document.getElementById("mySidenav").style.width = "40%";
+// }
 
-$('.desktop').menuBreaker();
-$(window).on('load resize', function () {
-  $('.mobile').height($(window).height() - $('nav').height());
-});
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 
-console.log("b");
+
+function navtoggler() {
+    var x = document.getElementById("mySidenav");
+    if (x.style.width === "0px") {
+        x.style.width = "40%";
+    } else {
+        x.style.width = "0px";
+    }
+}
+// console.log(a)
+
+// function myFunction() {
+// ("#mySidenav").click(function){
+//   $(this).toggleClass("enlarge")
+//   }
+//   }
+
+//   console.log(b)
