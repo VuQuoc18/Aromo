@@ -103,9 +103,40 @@ $(document).ready(function(){
 
 
 $('#nav-toggle').click(function() {
-      $('sidenav ul li a').slideToggle();
+      $('#cssmenu').slideToggle();
     });
     // Hamburger to X toggle
     $('#nav-toggle').on('click', function() {
       this.classList.toggle('active');
     });
+
+// $('dropdown-toggle').click(function() {
+//       $('#sub-menu li a').slideToggle();
+//     });
+//     // Hamburger to X toggle
+//     
+
+(function($){
+$(document).ready(function(){
+
+$('#cssmenu li.active').addClass('open').children('ul').show();
+  $('#cssmenu li.has-sub>a').on('click', function(){
+    $(this).removeAttr('href');
+    var element = $(this).parent('li');
+    if (element.hasClass('open')) {
+      element.removeClass('open');
+      element.find('li').removeClass('open');
+      element.find('ul').slideUp(1000);
+    }
+    else {
+      element.addClass('open');
+      element.children('ul').slideDown(1000);
+      element.siblings('li').children('ul').slideUp(1000);
+      element.siblings('li').removeClass('open');
+      element.siblings('li').find('li').removeClass('open');
+      element.siblings('li').find('ul').slideUp(1000);
+    }
+  });
+
+});
+})(jQuery);
