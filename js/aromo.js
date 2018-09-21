@@ -1,34 +1,34 @@
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+// $(document).ready(function(){
+//   // Add smooth scrolling to all links
+//   $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+//     // Make sure this.hash has a value before overriding default behavior
+//     if (this.hash !== "") {
+//       // Prevent default anchor click behavior
+//       event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+//       // Store hash
+//       var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+//       // Using jQuery's animate() method to add smooth page scroll
+//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+//       $('html, body').animate({
+//         scrollTop: $(hash).offset().top
+//       }, 800, function(){
    
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
+//         // Add hash (#) to URL when done scrolling (default click behavior)
+//         window.location.hash = hash;
+//       });
+//     } // End if
+//   });
+// });
 
 // -------------- Hover button --------------
-// $('ul.nav li.dropdown').hover(function() {
-//   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-// }, function() {
-//   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-// });
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
 
 
 // -------------- Carousel --------------
@@ -91,12 +91,21 @@ $(document).ready(function(){
 });
 
 
-    $('ul.nav > li > a').click(function() {
+    // $('ul.nav > li > a').click(function() {
         
-        $('ul.sub-menu').slideUp('normal');
+    //     $('ul.sub-menu').slideUp('normal');
    
-        if($(this).next('ul.sub-menu').is(':hidden') == true) {    
-            $(this).next('ul.sub-menu').slideDown('normal');
-            } 
+    //     if($(this).next('ul.sub-menu').is(':hidden') == true) {    
+    //         $(this).next('ul.sub-menu').slideDown('normal');
+    //         } 
             
+    // });
+
+
+$('#nav-toggle').click(function() {
+      $('sidenav ul li a').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
     });
