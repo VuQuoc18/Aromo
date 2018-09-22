@@ -450,7 +450,7 @@ button.owl-dot.active span{
 }
 
 .footer p{
-	margin-top: 8px;
+	margin-top: 13px;
 }
 
 .footer hr{
@@ -468,11 +468,11 @@ button.owl-dot.active span{
 
 
 
-#contact .wtm .nav-link:last-child:before{
+/*#contact .wtm .nav-link:last-child:before{
 		content: "|";
 		margin-right: 25px;
 }
-
+*/
 
 
 
@@ -620,10 +620,6 @@ button.owl-dot.active span{
 		border: none;
 	}
 
-	/*.menu{
-		width: 40%;
-		height: 100%;
-	}*/
 
 	/*=======Top=======*/
 	#about-us .content-top h3, #about-us .content-top h2, #about-us .content-top p{
@@ -662,13 +658,13 @@ button.owl-dot.active span{
 	/*=======Contact=======*/
 
 	#contact .nav-link {
-		padding-right: 0px;
+		/*padding-right: 0px;*/
 	}
 
-	#contact .wtm .nav-link:last-child:before{
+	/*#contact .wtm .nav-link:last-child:before{
 		content: "|";
 		margin-right: 10px;
-	}
+	}*/
 
 	#contact img{
 		margin-top: 10px;
@@ -796,45 +792,7 @@ button.owl-dot.active span{
 			background-color: #f2f2f2;
 			border-radius: 50%;
 		}
-		/*#cssmenu ul > li.has-sub > a:after {
-		  position: absolute;
-		  right: 26px;
-		  top: 19px;
-		  z-index: 5;
-		  display: block;
-		  height: 10px;
-		  width: 2px;
-		  background: #ffffff;
-		  content: "";
-		  -webkit-transition: all 0.1s ease-out;
-		  -moz-transition: all 0.1s ease-out;
-		  -ms-transition: all 0.1s ease-out;
-		  -o-transition: all 0.1s ease-out;
-		  transition: all 0.1s ease-out;
-		}
-		#cssmenu ul > li.has-sub > a:before {
-		  position: absolute;
-		  right: 22px;
-		  top: 23px;
-		  display: block;
-		  width: 10px;
-		  height: 2px;
-		  background: #ffffff;
-		  content: "";
-		  -webkit-transition: all 0.1s ease-out;
-		  -moz-transition: all 0.1s ease-out;
-		  -ms-transition: all 0.1s ease-out;
-		  -o-transition: all 0.1s ease-out;
-		  transition: all 0.1s ease-out;
-		}
-		#cssmenu ul > li.has-sub.open > a:after,
-		#cssmenu ul > li.has-sub.open > a:before {
-		  -webkit-transform: rotate(45deg);
-		  -moz-transform: rotate(45deg);
-		  -ms-transform: rotate(45deg);
-		  -o-transform: rotate(45deg);
-		  transform: rotate(45deg);
-		}*/
+	
 		#cssmenu ul ul li a {
 		  line-height: 70px;
 		  cursor: pointer;
@@ -868,11 +826,40 @@ button.owl-dot.active span{
 			margin-left: 32px;
 		}
 
+		.footer p{
+			margin-top: 15px;
+		}
 
 
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media (max-width: 600px){
+	.footer {
+		text-align: center;
+	}
+	.footer .nav .nav-link{
+		display: flex;
+    	flex-direction: column; 
+	}
+
+	.footer-menu{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#contact .nav-link{
+		padding-right: 0;
+	}
+
+	
+	.footer p{
+		margin: 0 0;
+	}
+
+	#contact .wtm{
+		display: flex;
+		text-align: center;
+		float: none !important;
+		justify-content: center;
+	}
 }
