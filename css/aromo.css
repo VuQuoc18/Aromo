@@ -3,8 +3,16 @@
 *{margin: 0; padding: 0;}
 
 html, body{
-	font-family: 'CircularStd';
+	font-family: 'CircularStd', sans-serif;
+	font-weight: 300;
+	font-style: normal;
 	overflow-x: hidden;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased !important;
+	font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important; 
+	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+
 }
 
 .page-section{
@@ -147,7 +155,7 @@ hr{
  	position: absolute;
  }
 
- #mySidenav {
+ #cssmenu {
 	display: none;
 }
 
@@ -624,8 +632,8 @@ button.owl-dot.active span{
 
 	.content-top .btn-explore {
 		margin-right: calc(50% - 88px);
-		margin-right: -moz-calc(50% - 15px);
-		margin-right: -webkit-calc(50% - 15px);
+		margin-right: -moz-calc(50% - 88px);
+		margin-right: -webkit-calc(50% - 88px);
     
 	}
 
@@ -667,82 +675,6 @@ button.owl-dot.active span{
 	}
 	
 	.navbar-toggler {display: none}
-
-	/*.hambuger-icon{
-		display: block;
-		font-size: 25px;
-		margin-left: -80px;
-	}
-
-	
-	
-	
-		
-	.sidenav {
-	    height: 100%;
-	    width: 0;
-	    position: fixed;
-	    z-index: 0;
-	    top: 60px;
-	    left: 0;
-	    background-color: #0c2a34;
-	    overflow-x: hidden;
-	    transition: 0.4s;
-	    padding-top: 30px;
-	
-	}
-	
-	.sidenav.collapse.show{
-		width: 300px;
-	}
-
-	 #mySidenav {
-	display: block;
-	}
-
-	.sidenav a {
-	    padding: 8px 8px 8px 32px;
-	    text-decoration: none;
-	    font-size: 16px;
-	    color: #818181;
-	    display: block;
-	    transition: 0.3s;
-	    color: #f4f4f4;
-	}
-
-	.sidenav a:hover {
-	    color: #f1f1f1;
-	}
-
-	.sidenav .closebtn {
-	    position: absolute;
-	    top: 25px;
-	    right: 25px;
-	    font-size: 36px;
-	    margin-left: 50px;
-	}
-	
-	.sidenav ul li {
-		height: 80px;
-		padding-left: 20px;
-		padding-top: 10px;
-		padding: 0 15px;
-	}
-
-	.sidenav ul li a {
-		font-size: 16px;
-		color: #f4f4f4 !important;
-	}
-
-	li.dropdown.nav-item{
-		padding: 0 45px !important;
-	}
-
-	ul.sub-menu {display:none;}
-
-
-	*/
-	
 
 		a#nav-toggle {
 			background-color: #fff;
@@ -788,6 +720,17 @@ button.owl-dot.active span{
 		#nav-toggle.active span:after {
 		  transform: rotate(-45deg);
 		}
+		
+		a.dropdown-toggle::after{
+			    width: 11px;
+			    position: absolute;
+			    right: 25%;
+			    top: 47%;
+			    height: 10px;
+			    color: #8694a3;
+			    z-index: 9999;
+			    background-repeat: no-repeat;
+		}
 
 		#cssmenu,
 		#cssmenu ul,
@@ -796,13 +739,14 @@ button.owl-dot.active span{
 		  margin: 0;
 		  padding: 0;
 		  border: 0;
-		  list-style: none;
+		  text-decoration: none;
 		  line-height: 1;
 		  display: block;
 		  position: relative;
 		  -webkit-box-sizing: border-box;
 		  -moz-box-sizing: border-box;
 		  box-sizing: border-box;
+		  font-weight: lighter;
 		}
 		#cssmenu {
 		  width: 39%;
@@ -817,6 +761,9 @@ button.owl-dot.active span{
 		#cssmenu ul ul {
 		  display: none;
 		}
+		#cssmenu ul{
+			padding-top: 10px;
+		}
 		#cssmenu > ul > li.active > ul {
 		  display: block;
 		}
@@ -824,21 +771,32 @@ button.owl-dot.active span{
 		  float: right;
 		}
 		#cssmenu > ul > li > a {
-		  padding: 16px 22px;
-		  cursor: pointer;
-		  z-index: 2;
-		  font-size: 16px;
-		  text-decoration: none;
-		  color: #f4f4f4;
-		  background: #0c2a34;
-		  -webkit-transition: color .2s ease;
-		  -o-transition: color .2s ease;
-		  transition: color .2s ease;
+		   cursor: pointer;
+		    color: #f4f4f4;
+		    background: #0c2a34;
+		    -webkit-transition: color .2s ease;
+		    -o-transition: color .2s ease;
+		    transition: color .2s ease;
+		    line-height: 70px;
+		    padding-left: 8%;
 		}
 		#cssmenu > ul > li > a:hover {
 		  color: #d8f3f0;
 		}
-		#cssmenu ul > li.has-sub > a:after {
+
+		#cssmenu ul ul li a:before{
+			display: inline-block;
+			margin-right: 10px;
+			line-height: 16px;
+			content: "";
+			width: 6px;
+			height: 6px;
+			mask-size: cover;
+			mask: url(../images/SVG/circle-solid.svg) no-repeat;
+			background-color: #f2f2f2;
+			border-radius: 50%;
+		}
+		/*#cssmenu ul > li.has-sub > a:after {
 		  position: absolute;
 		  right: 26px;
 		  top: 19px;
@@ -876,18 +834,19 @@ button.owl-dot.active span{
 		  -ms-transform: rotate(45deg);
 		  -o-transform: rotate(45deg);
 		  transform: rotate(45deg);
-		}
+		}*/
 		#cssmenu ul ul li a {
-		  padding: 14px 22px;
+		  line-height: 70px;
 		  cursor: pointer;
 		  z-index: 2;
-		  font-size: 14px;
-		  text-decoration: none;
-		  color: #f4f4f4;
+		  font-size: 16px;
+		  /*text-decoration: none;*/
+		  color: #e1e1e1;
 		  background: #002430;
 		  -webkit-transition: color .2s ease;
 		  -o-transition: color .2s ease;
 		  transition: color .2s ease;
+		  padding-left: 8%;
 		}
 		#cssmenu ul ul ul li a {
 		  padding-left: 32px;
@@ -903,6 +862,10 @@ button.owl-dot.active span{
 		#cssmenu ul ul > li.has-sub > a:before {
 		  top: 20px;
 		  background: #dddddd;
+		}
+		#cssmenu ul li a img:last-child {
+			display: inline-block;
+			margin-left: 32px;
 		}
 
 

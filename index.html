@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/aromo.css">
 		<link rel="stylesheet" href="css/infinite-slider.css">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/circular-std.css">
+		<link rel="stylesheet preload" href="css/circular-std.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -29,8 +29,8 @@
 						<li class="dropdown nav-item">
 							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">About Us <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#" class="inside-dropdown">Vision</a></li>
-								<li><a href="#" class="inside-dropdown">Our Team</a></li>
+								<li><a href="#" class="inside-dropdown"></i>Vision</a></li>
+								<li><a href="#" class="inside-dropdown"></i>Our Team</a></li>
 							</ul>
 						</li>
 						<li class="dropdown nav-item">
@@ -51,7 +51,7 @@
 					<div class="lang">
 					<img src="images/SVG/jp-flag.svg" width="24px" height="24px">
 					<img src="images/SVG/uk-flag.svg" width="24px" height="24px">
-				</div>
+					</div>
 				</div>
 				<a class="hide-logo" href="#"><img src="images/SVG/Logo-colors.svg" alt="" width="127" height="30" class="img-fluid"></a>
 
@@ -74,11 +74,10 @@
 					</div> -->
 				<a id="nav-toggle" href="#!"><span></span></a>
 				<!-- <span class="hambuger-icon" onclick="navtoggler()"></span> -->
-			<div class="wrap">
 				<div id='cssmenu'>
 					<ul>
 					   <li><a href='#'>Home</a></li>
-					   <li class='has-sub'><a href='#'>About Us</a>
+					   <li class="has-sub"><a href='#' class="dropdown-toggle">About Us</a>
 					      <ul>
 					         <li><a href='#'>Vision</a>
 					         </li>
@@ -86,7 +85,7 @@
 					         </li>
 					      </ul>
 					   </li>
-					   <li class="has-sub"><a href='#'>Our Services</a>
+					   <li class="has-sub"><a href='#' class="dropdown-toggle">Our Services</a>
 					   	   <ul>
 					   		 <li><a href='#'>Market Research</a>
 					         </li>
@@ -98,38 +97,12 @@
 					   </li>
 					   <li><a href='#'>News</a></li>
 					   <li><a href='#'>Contact Us</a></li>
+					   <li>
+					<a><img src="images/SVG/jp-flag.svg" width="32px" height="32px"><img src="images/SVG/uk-flag.svg" width="32px" height="32px"></a>
+					
+						</li>
 					</ul>
-				</div>
-			</div>
-
-				<!-- <div id="mySidenav" class="sidenav">
-					<ul class="navbar-nav nav">
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li class="">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="collapse" data-target="#sub-menu">About Us</a>
-							<ul id="sub-menu">
-								<li ><a href="#">Market Research</a></li>
-								<li><a href="#" class="inside-dropdown">Media Intelligence</a></li>
-								<li><a href="#" class="inside-dropdown">Software Developement</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Our Services</a>
-						</li>
-						<li>
-							<a href="#">News</a>
-						</li>
-						<li>
-							<a href="#">Contact Us</a>
-						</li>
-					</ul> -->
-				  
-				  
-				  
-				  
-				  
+				</div>				  
 				</div>
 				
 			</div>
@@ -285,8 +258,8 @@
 																	<div class="col-sm-3">
 																		<img src="images/SVG/Logo mono.svg" alt="" class="">
 																	</div>
-																	<div class="col-sm-6 col-md-9" data-aos="fade-up" data-aos-duration="1500" class="aos-init aos-animate">
-																		<nav class="nav navbar footer-menu justify-content-between float-right">
+																	<div class="col-sm-6 offset-sm-3 col-md-9" data-aos="fade-up" data-aos-duration="1500" class="aos-init aos-animate">
+																		<nav class="nav navbar footer-menu justify-content-between">
 																			<a class="nav-link" href="#about-us">About us</a>
 																			<a class="nav-link" href="#our-services">Our Services</a>
 																			<a class="nav-link" href="#news">News</a>
@@ -296,10 +269,10 @@
 																</div>
 																<hr>
 																<div class="row">
-																	<div class="col-sm-5">
+																	<div class="col-sm-3">
 																		<p>Aromo &copy; 2017</p>
 																	</div>
-																	<div class="col-sm-7">
+																	<div class="col-sm-9">
 																		<nav class="nav navbar float-right text-muted wtm">
 																			<a class="nav-link">Privacy Policy</a>
 																			<a class="nav-link">Term of Services</a>

@@ -48,7 +48,7 @@ $('ul.nav li.dropdown').hover(function() {
     1000:{
     items:4
     },
-    1440:{
+    1400:{
     items:6
     }
   }
@@ -70,6 +70,11 @@ $('ul.nav li.dropdown').hover(function() {
             items:1,
             nav:false
         },
+        768:{
+            items:3,
+            nav:true,
+            loop:true
+        },
         1000:{
             items:2,
             nav:true,
@@ -84,11 +89,11 @@ $('ul.nav li.dropdown').hover(function() {
 })
 
 
-$(document).ready(function(){
-  $('#nav-icon').click(function(){
-    $(this).toggleClass('open');
-  });
-});
+// $(document).ready(function(){
+//   $('#nav-icon').click(function(){
+//     $(this).toggleClass('open');
+//   });
+// });
 
 
     // $('ul.nav > li > a').click(function() {
@@ -110,11 +115,6 @@ $('#nav-toggle').click(function() {
       this.classList.toggle('active');
     });
 
-// $('dropdown-toggle').click(function() {
-//       $('#sub-menu li a').slideToggle();
-//     });
-//     // Hamburger to X toggle
-//     
 
 (function($){
 $(document).ready(function(){
