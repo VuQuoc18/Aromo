@@ -7,16 +7,20 @@
 		<link rel="stylesheet" href="css/aromo.css">
 		<link rel="stylesheet" href="css/infinite-slider.css">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<link rel="stylesheet preload" href="css/circular-std.css">
+		<link rel="stylesheet" href="css/circular-std.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="css/owl.theme.default.min.css">
-		
+		<link rel="stylesheet" href="css/owl.theme.default.css">
 	</head>
 	<body>
-		
+      <main>
+      	<div class="pre-loader">
+	      <div class="logo-spin">
+	        <img src="images/SVG/Logo mono.svg">
+	      </div>
+	    </div>
 		<nav class="navbar navbar-expand-md navbar-light menu fixed-top">
 			<div class="container">
 
@@ -27,25 +31,25 @@
 					<a class="navbar-brand" href="#"><img src="images/SVG/Logo-colors.svg" alt="" width="127" height="30" class="img-fluid"></a>
 					<ul class="navbar-nav nav">
 						<li class="dropdown nav-item">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">About Us <b class="caret"></b></a>
+							<a href="#about-us" class="dropdown-toggle nav-link" data-toggle="dropdown">About Us <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#" class="inside-dropdown"></i>Vision</a></li>
-								<li><a href="#" class="inside-dropdown"></i>Our Team</a></li>
+								<li><a href="#about-us" class="inside-dropdown"></i>Vision</a></li>
+								<li><a href="#about-us" class="inside-dropdown"></i>Our Team</a></li>
 							</ul>
 						</li>
 						<li class="dropdown nav-item">
-							<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Our Services <b class="caret"></b></a>
+							<a href="#our-services" class="dropdown-toggle nav-link" data-toggle="dropdown">Our Services <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#" class="inside-dropdown">Market Research</a></li>
-								<li><a href="#" class="inside-dropdown">Media Intelligence</a></li>
-								<li><a href="#" class="inside-dropdown">Software Developement</a></li>
+								<li><a href="#our-services" class="inside-dropdown">Market Research</a></li>
+								<li><a href="#our-services" class="inside-dropdown">Media Intelligence</a></li>
+								<li><a href="#our-services" class="inside-dropdown">Software Developement</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#" >News</a>
+							<a class="nav-link" href="#news" >News</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contact Us</a>
+							<a class="nav-link" href="#contact">Contact Us</a>
 						</li>
 					</ul>
 					<div class="lang">
@@ -54,26 +58,7 @@
 					</div>
 				</div>
 				<a class="hide-logo" href="#"><img src="images/SVG/Logo-colors.svg" alt="" width="127" height="30" class="img-fluid"></a>
-
-				<!-- <nav id="navbar">
-					<ul>
-						<li><a>a</a></li>
-						<li><a>b</a>
-							<ul>d</ul></li>
-						<li><a>c</a></li>
-					</ul>
-				</nav>   	
-				<div class="overlay"></div> -->
-
-<!-- https://www.jqueryscript.net/menu/Responsive-Navigation-jQuery-menuBreaker.html -->
-				
-					<!-- <div id="nav-toogle" data-toggle="collapse" data-target="#mySidenav">
-					  <span></span>
-					  <span></span>
-					  <span></span>
-					</div> -->
 				<a id="nav-toggle" href="#!"><span></span></a>
-				<!-- <span class="hambuger-icon" onclick="navtoggler()"></span> -->
 				<div id='cssmenu'>
 					<ul>
 					   <li><a href='#'>Home</a></li>
@@ -282,7 +267,8 @@
 																</div>
 															</div>
 														</div>
-														
+														<a href="#" id="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+</main>															
 														<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 														<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 														<script src="js/owl.carousel.min.js"></script>
@@ -290,10 +276,14 @@
 														<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 														<script src="js/aromo.js"></script>
 														
+														<script>
+															
+														</script>
 
 														<script>
 														AOS.init(window.addEventListener('load', AOS.refreshHard(true)));
 														</script>
 														
+
 													</body>
 												</html>

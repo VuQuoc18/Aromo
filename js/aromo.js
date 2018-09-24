@@ -1,27 +1,40 @@
-// $(document).ready(function(){
-//   // Add smooth scrolling to all links
-//   $("a").on('click', function(event) {
+// -------------- PreLoad --------------
+$(window).on('load', function(e) {
+  setTimeout(function(){
+    $(".pre-loader").fadeOut(600);
+    AOS.init({
+      duration: 100,
+      easing: 'ease-in-out',
+      disable: 'phone'
+    });
+  }, 200);
+})
 
-//     // Make sure this.hash has a value before overriding default behavior
-//     if (this.hash !== "") {
-//       // Prevent default anchor click behavior
-//       event.preventDefault();
 
-//       // Store hash
-//       var hash = this.hash;
+// -------------- Scrolltop Button --------------
 
-//       // Using jQuery's animate() method to add smooth page scroll
-//       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-//       $('html, body').animate({
-//         scrollTop: $(hash).offset().top
-//       }, 800, function(){
-   
-//         // Add hash (#) to URL when done scrolling (default click behavior)
-//         window.location.hash = hash;
-//       });
-//     } // End if
-//   });
-// });
+if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+
 
 // -------------- Hover button --------------
 $('ul.nav li.dropdown').hover(function() {
@@ -36,7 +49,7 @@ $('ul.nav li.dropdown').hover(function() {
   loop:true,
   nav:true,
   autoplay:true,
-  autoplayTimeout:1000,
+  autoplayTimeout:6000,
   dots:false,
   responsive:{
     0:{
@@ -88,8 +101,7 @@ $('ul.nav li.dropdown').hover(function() {
     }
 })
 
-
-
+// -------------- Reponsive Menu --------------
 
 $('#nav-toggle').click(function() {
       $('#cssmenu').slideToggle();
